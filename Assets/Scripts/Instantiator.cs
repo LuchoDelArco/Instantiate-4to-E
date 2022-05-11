@@ -5,24 +5,12 @@ using UnityEngine;
 public class Instantiator : MonoBehaviour
 {
     public GameObject objectToClone;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-    }
+	public int cloneAmount;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void TripleInstantiate()
+    public void MultiInstantiate()
     {
         int counter = 0;
-        while (counter < 3)
+        while (counter < cloneAmount)
         {
             Instantiate(objectToClone);
             counter++;
