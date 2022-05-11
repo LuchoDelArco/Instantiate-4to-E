@@ -996,6 +996,7 @@ MonoBehaviour:
   objectToClone: {fileID: 590063301479461413, guid: fbc07ceec8aceab46bf5be128f9f7789,
     type: 3}
   cloneAmount: 0
+  txtUserCloneAmount: {fileID: 518597737}
 --- !u!4 &1137861068
 Transform:
   m_ObjectHideFlags: 0
