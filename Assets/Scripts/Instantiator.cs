@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class Instantiator : MonoBehaviour
 {
     public GameObject objectToClone;
-	public int cloneAmount;
+	int cloneAmount;
 	public Text txtUserCloneAmount;
+	GameObject clon;
 
     public void MultiInstantiate()
     {
-        int counter = 0;
 		cloneAmount = int.Parse(txtUserCloneAmount.text);
 		if (txtUserCloneAmount.text != "")
 		{
 			cloneAmount = int.Parse(txtUserCloneAmount.text);
 		}
 		
-        while (counter < cloneAmount)
-        {
-            Instantiate(objectToClone);
-            counter++;
-        }
+       for (int i=0; i<cloneAmount; i++)
+		{
+			clon = Instantiate(objectToClone);
+			Destroy(clon, 2);
+		}
     }
 }
